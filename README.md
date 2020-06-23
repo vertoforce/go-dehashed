@@ -1,5 +1,8 @@
 # Dehashed
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/vertoforce/go-dehashed)](https://goreportcard.com/report/github.com/vertoforce/go-dehashed)
+[![Documentation](https://godoc.org/github.com/vertoforce/go-dehashed?status.svg)](https://godoc.org/github.com/vertoforce/go-dehashed)
+
 Go library to use the [dehashed api](https://www.dehashed.com/docs).
 
 ## Rate Limits
