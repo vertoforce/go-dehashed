@@ -12,23 +12,26 @@ import (
 	"time"
 )
 
+// SearchEntry from dehashed
+type SearchEntry struct {
+	ID             string
+	Email          string
+	IPAddress      string `json:"ip_address"`
+	Username       string
+	Password       string
+	HashedPassword string `json:"hashed_password"`
+	HashType       string `json:"hash_type"`
+	Name           string
+	VIN            string
+	Address        string
+	Phone          string
+	DatabaseName   string `json:"database_name"`
+}
+
 // SearchResponse is the response after sending a search api call
 type SearchResponse struct {
 	Balance int // API Balance remaining
-	Entries []struct {
-		ID             string
-		Email          string
-		IPAddress      string `json:"ip_address"`
-		Username       string
-		Password       string
-		HashedPassword string `json:"hashed_password"`
-		HashType       string `json:"hash_type"`
-		Name           string
-		VIN            string
-		Address        string
-		Phone          string
-		DatabaseName   string `json:"database_name"`
-	}
+	Entries []SearchEntry
 	Success bool
 	Took    string
 	Total   int // Total results
